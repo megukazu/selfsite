@@ -1,0 +1,16 @@
+@charset 'UTF-8';
+/*
+  Main
+-----------------------------------------------------*/
+
+.l-main {
+  clear: both;
+  margin-top: set-size(76px);
+}
+
+
+@include mq ( 'tab' ) {
+  .l-main {
+    margin-top: set-size(96px);
+  }
+}

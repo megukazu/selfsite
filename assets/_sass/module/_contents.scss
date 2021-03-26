@@ -1,0 +1,91 @@
+@charset 'UTF-8';
+/*
+  Contents
+-----------------------------------------------------*/
+
+/*
+  Contents
+*/
+
+.contents__title {
+  font-size: set-size(14px);
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+.contents__title.--margin {
+  margin-top: set-size(24px);
+}
+
+.contents__text {
+  font-size: set-size(14px);
+  margin-top: set-size(16px);
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+.contents__text.--margin {
+  margin-top: set-size(24px);
+}
+
+.contents__lineListWrap ul {
+  font-size: 0;
+}
+
+.contents__lineList {
+  display: inline-block;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  font-size: set-size(16px);
+}
+
+.contents__lineList + .contents__lineList:before {
+  content:'/';
+}
+
+.contents__list {
+  list-style: disc;
+  margin-left: set-size(20px);
+  color: #333;
+  margin-top: set-size(10px);
+}
+
+.contents__wrap.--margin {
+  margin-top: set-size(48px);
+}
+
+.contents__img{
+  margin-top: set-size(24px);
+}
+
+/*
+  career
+*/
+
+.career__wrap {
+  margin-top: set-size(56px);
+}
+
+
+@include mq ( 'tab' ) {
+  .contents__title {
+    font-size: set-size(16px);
+  }
+
+  .contents__title.--margin {
+    margin-top: set-size(56px);
+  }
+
+  .contents__text {
+    font-size: set-size(16px);
+    margin-top: set-size(24px);
+  }
+
+  .contents__list {
+    font-size: set-size(16px);
+  }
+
+  .contents__text.--margin {
+  margin-top: set-size(48px);
+  }
+}

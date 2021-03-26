@@ -1,0 +1,1043 @@
+@charset "UTF-8";
+/* =====================================================
+  1.0 - Base
+===================================================== */
+/**
+ * File Name : common.css
+ * Version : 1.0
+ * Description : 全ページ共通CSSファイル
+ * Since : 2019-09-17
+ *
+ * ---- Table of Contents ----
+ *
+ * 1.0 - Base
+ *        - Reset
+ *        - Default Style
+ *
+ * 2.0 - Layout
+ *        - Centering
+ *        - Header
+ *        - Main
+ *        - Section
+ *        - Footer
+ *        - Grid
+ *
+ * 3.0 - Module
+ *        - Global-nav
+ *        - Hero
+ *        - Heading
+ *        - Card
+ *        - Media
+ *        - Contents
+ *              - Contents
+ *              - Career
+ *        - Form
+ *        - Button
+ *        - Screen Reader Text
+ *
+ */
+/*
+  Reset
+-----------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: inherit;
+  font-size: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/*
+  Default Style
+-----------------------------------------------------*/
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #fff;
+  color: #333;
+  font-family: "Noto Serif JP", 游明朝, YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", HG明朝E, "ＭＳ Ｐ明朝", serif;
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+a:before, a:after {
+  transition: inherit;
+}
+
+input,
+textarea {
+  padding: 0;
+  outline: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+}
+
+/* =====================================================
+  2.0 - Layout
+===================================================== */
+/*
+  Centering
+-----------------------------------------------------*/
+.l-container__full {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.l-container__middle {
+  margin: 0 auto;
+  max-width: 1022px;
+  width: 90%;
+}
+
+.l-container__short {
+  margin: 0 auto;
+  max-width: 480px;
+  width: 90%;
+}
+
+/*
+  Header
+-----------------------------------------------------*/
+.l-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  padding: 1.25rem 0;
+  transition: all .3s ease-in-out;
+}
+
+.l-header__title {
+  float: left;
+}
+
+.l-header__logo {
+  letter-spacing: 2px;
+  font-size: 1.125rem;
+}
+
+.l-header__caption {
+  font-size: 0.875rem;
+}
+
+.l-header__nav {
+  float: right;
+}
+
+.is-header .header__title img {
+  width: 70%;
+}
+
+.is-header .header {
+  padding: 0.375rem;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.is-header .header__nav {
+  padding-top: 0.5rem;
+}
+
+/*
+  Main
+-----------------------------------------------------*/
+.l-main {
+  clear: both;
+  margin-top: 4.75rem;
+}
+
+/*
+  Section
+-----------------------------------------------------*/
+.l-section {
+  padding-top: 1.5rem;
+  margin-top: 3.5rem;
+}
+
+.l-section__button {
+  margin: 2.25rem auto 0;
+  max-width: 20rem;
+}
+
+.l-section__button.--marginShort {
+  margin: 0.75rem auto 0;
+}
+
+.l-section__buttonItem + .l-section__buttonItem {
+  margin-top: 1.5rem;
+}
+
+/*
+  Footer
+-----------------------------------------------------*/
+.l-footer {
+  clear: both;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.l-footer__title {
+  padding: 1.5rem 0 0;
+  text-align: center;
+}
+
+.l-footer__copyright {
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+/*
+  Grid
+-----------------------------------------------------*/
+.l-grid {
+  display: table;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 0;
+}
+
+.l-grid__item {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  vertical-align: top;
+  text-align: left;
+  font-size: medium;
+}
+
+.l-grid.-gutter {
+  display: block;
+  margin: -4px;
+  width: auto;
+}
+
+.l-grid.-gutter > .l-grid__item {
+  border: 4px solid transparent;
+  background-clip: padding-box;
+}
+
+.l-grid.-reverse {
+  direction: rtl;
+}
+
+.l-grid.-reverse > .l-grid__item {
+  direction: ltr;
+}
+
+.l-grid__item.-sp1Of12 {
+  width: 8.33333%;
+}
+
+.l-grid__item.-sp2Of12 {
+  width: 16.66667%;
+}
+
+.l-grid__item.-sp3Of12 {
+  width: 25%;
+}
+
+.l-grid__item.-sp4Of12 {
+  width: 33.33333%;
+}
+
+.l-grid__item.-sp5Of12 {
+  width: 41.66667%;
+}
+
+.l-grid__item.-sp6Of12 {
+  width: 50%;
+}
+
+.l-grid__item.-sp7Of12 {
+  width: 58.33333%;
+}
+
+.l-grid__item.-sp8Of12 {
+  width: 66.66667%;
+}
+
+.l-grid__item.-sp9Of12 {
+  width: 75%;
+}
+
+.l-grid__item.-sp10Of12 {
+  width: 83.33333%;
+}
+
+.l-grid__item.-sp11Of12 {
+  width: 91.66667%;
+}
+
+.l-grid__item.-sp12Of12 {
+  width: 100%;
+}
+
+.l-grid__item.-spFive {
+  width: 20%;
+}
+
+/* =====================================================
+  3.0 - Module
+===================================================== */
+/*
+  Global-Nav
+-----------------------------------------------------*/
+.l-globalNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  padding-top: 4rem;
+  background-color: #fff;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+.l-globalNav li a {
+  display: block;
+  padding: 2.25rem;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  transition: all .3s ease-in-out;
+}
+
+.l-globalNav li a:hover {
+  color: #ccc;
+}
+
+.is-active-drawer .l-globalNav {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*
+  Hero
+-----------------------------------------------------*/
+.hero {
+  position: relative;
+}
+
+.hero__copy {
+  position: absolute;
+  transform: translateY(-50%);
+  text-align: left;
+  top: 30%;
+  left: 5%;
+}
+
+/*
+  Heading
+-----------------------------------------------------*/
+.heading__primary {
+  margin-bottom: 2rem;
+  letter-spacing: 5px;
+  font-size: 1.5rem;
+}
+
+.heading__caption {
+  display: block;
+  margin-top: 0.5rem;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+/*
+  Card
+-----------------------------------------------------*/
+.cardPrimary {
+  position: relative;
+  display: block;
+  padding-top: 61.8047%;
+  text-decoration: none;
+}
+
+.cardPrimary + .cardPrimary {
+  margin-top: 1rem;
+}
+
+.cardPrimary__title {
+  margin-top: 1.125rem;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.cardPrimary__title--caption {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.cardPrimary__title.--emphasis {
+  font-size: 1rem;
+}
+
+.cardPrimary__thumbnail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.cardPrimary__wrap {
+  margin-top: 1rem;
+  padding-bottom: 1.5rem;
+  font-size: 0.8125rem;
+}
+
+.cardPrimary__link {
+  transition: all .3s ease-in-out;
+  letter-spacing: 3px;
+}
+
+.cardPrimary__link a:hover {
+  color: #ccc;
+}
+
+.cardPrimary__link + .cardPrimary__link {
+  margin-top: 0.25rem;
+}
+
+/*
+  Media
+-----------------------------------------------------*/
+.mediaPrimary {
+  position: relative;
+  display: block;
+  padding-top: 45%;
+  text-decoration: none;
+}
+
+.mediaPrimary__thumbnail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.mediaPrimary__title {
+  margin-top: 1.5rem;
+}
+
+/*
+  Contents
+-----------------------------------------------------*/
+/*
+  Contents
+*/
+.contents__title {
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+.contents__title.--margin {
+  margin-top: 1.5rem;
+}
+
+.contents__text {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+.contents__text.--margin {
+  margin-top: 1.5rem;
+}
+
+.contents__lineListWrap ul {
+  font-size: 0;
+}
+
+.contents__lineList {
+  display: inline-block;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.contents__lineList + .contents__lineList:before {
+  content: '/';
+}
+
+.contents__list {
+  list-style: disc;
+  margin-left: 1.25rem;
+  color: #333;
+  margin-top: 0.625rem;
+}
+
+.contents__wrap.--margin {
+  margin-top: 3rem;
+}
+
+.contents__img {
+  margin-top: 1.5rem;
+}
+
+/*
+  career
+*/
+.career__wrap {
+  margin-top: 3.5rem;
+}
+
+/*
+  Form
+-----------------------------------------------------*/
+.form__wrap {
+  padding: 0 1rem 1rem;
+  border: 1px solid #ccc;
+}
+
+.textField__label {
+  display: block;
+  margin: 2.25rem 0 1rem;
+}
+
+.textField__input,
+.textField__message {
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.textField__message {
+  min-height: 12.5rem;
+}
+
+/*
+  Button
+-----------------------------------------------------*/
+.button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/*
+  Hamburger Button
+*/
+.button__hamburger {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  bottom: 0;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  margin: auto 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  /* Chrome, Safari, Opera, Android */
+  -moz-appearance: none;
+  /* Firefox */
+  appearance: none;
+  /* IE非対応 */
+}
+
+.button__hamburgerLine {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 1px;
+  margin: auto;
+  border-radius: 4px;
+  background-color: #212121;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.button__hamburgerLine:before,
+.button__hamburgerLine:after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background-color: inherit;
+  content: '';
+  transition: transform .3s ease-in-out;
+}
+
+.button__hamburgerLine:before {
+  top: 5px;
+}
+
+.button__hamburgerLine:after {
+  top: -5px;
+}
+
+.is-active-drawer .button__hamburgerLine {
+  background-color: transparent;
+}
+
+.is-active-drawer .button__hamburgerLine:before,
+.is-active-drawer .button__hamburgerLine:after {
+  background-color: #212121;
+  top: 0;
+}
+
+.is-active-drawer .button__hamburgerLine:before {
+  transform: rotate(135deg);
+}
+
+.is-active-drawer .button__hamburgerLine:after {
+  transform: rotate(45deg);
+}
+
+/*
+  Button
+*/
+.button__primary {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #333;
+  padding: 1rem 5rem;
+  position: relative;
+  transition: .3s all ease-in-out;
+}
+
+.button__primary:after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  bottom: 0;
+  right: 10%;
+  width: 6px;
+  height: 6px;
+  margin: auto 0;
+  border-top: 1px solid #333;
+  border-right: 1px solid #333;
+  transform: rotate(45deg);
+}
+
+.button__primary:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.button__primary:hover:after {
+  border-color: #fff;
+  right: 7%;
+}
+
+.button__primary.--form {
+  border-color: #ccc;
+  padding: 1rem 3rem;
+}
+
+/*
+  Screen Reader Text
+-----------------------------------------------------*/
+.screen-reader-text {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+@media screen and (min-width: 768px) {
+  .l-container__full {
+    width: 80%;
+  }
+  .l-header {
+    padding: 1.875rem 0;
+  }
+  .l-header__nav {
+    padding: 0.5rem 0;
+  }
+  .l-main {
+    margin-top: 6rem;
+  }
+  .l-section {
+    padding-top: 4rem;
+    margin-top: 7rem;
+  }
+  .l-section__button {
+    margin-top: 4.75rem;
+  }
+  .l-section__button.--marginShort {
+    margin: 1.75rem auto 0;
+  }
+  .l-footer {
+    margin-top: 8rem;
+  }
+  .l-grid.-gutter {
+    margin: -8px;
+  }
+  .l-grid.-gutter > .l-grid__item {
+    border-width: 8px;
+  }
+  .l-grid__item.-tab1Of12 {
+    width: 8.33333%;
+  }
+  .l-grid__item.-tab2Of12 {
+    width: 16.66667%;
+  }
+  .l-grid__item.-tab3Of12 {
+    width: 25%;
+  }
+  .l-grid__item.-tab4Of12 {
+    width: 33.33333%;
+  }
+  .l-grid__item.-tab5Of12 {
+    width: 41.66667%;
+  }
+  .l-grid__item.-tab6Of12 {
+    width: 50%;
+  }
+  .l-grid__item.-tab7Of12 {
+    width: 58.33333%;
+  }
+  .l-grid__item.-tab8Of12 {
+    width: 66.66667%;
+  }
+  .l-grid__item.-tab9Of12 {
+    width: 75%;
+  }
+  .l-grid__item.-tab10Of12 {
+    width: 83.33333%;
+  }
+  .l-grid__item.-tab11Of12 {
+    width: 91.66667%;
+  }
+  .l-grid__item.-tab12Of12 {
+    width: 100%;
+  }
+  .l-grid__item.-tabFive {
+    width: 20%;
+  }
+  .l-globalNav {
+    position: static;
+    visibility: visible;
+    overflow: hidden;
+    padding: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  .l-globalNav li {
+    float: left;
+  }
+  .l-globalNav li + li {
+    margin-left: 2rem;
+  }
+  .l-globalNav li a {
+    display: inline-block;
+    padding: 0;
+    font-size: 1rem;
+  }
+  .hero.--home {
+    margin-left: auto;
+    width: 90%;
+    text-align: right;
+  }
+  .hero.--home img {
+    width: 90%;
+  }
+  .hero__copy {
+    top: 50%;
+    left: 0;
+    font-size: 2rem;
+  }
+  .heading__primary {
+    margin-bottom: 3.75rem;
+  }
+  .heading__caption {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  .cardPrimary__title {
+    font-size: 1rem;
+  }
+  .cardPrimary__wrap {
+    margin-top: 1.5rem;
+    padding-bottom: 3rem;
+  }
+  .mediaPrimary {
+    position: static;
+    overflow: hidden;
+    padding: 0;
+  }
+  .mediaPrimary__body {
+    float: left;
+    width: 55%;
+  }
+  .mediaPrimary__title {
+    margin-top: 0;
+  }
+  .mediaPrimary__thumbnail {
+    position: static;
+    float: right;
+    width: 40%;
+  }
+  .contents__title {
+    font-size: 1rem;
+  }
+  .contents__title.--margin {
+    margin-top: 3.5rem;
+  }
+  .contents__text {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+  .contents__list {
+    font-size: 1rem;
+  }
+  .contents__text.--margin {
+    margin-top: 3rem;
+  }
+  .textField__label {
+    margin: 4rem 0 1rem;
+  }
+  .form__wrap {
+    padding: 0 4rem 4rem;
+  }
+  .textField__message {
+    min-height: 22.5rem;
+  }
+  .button__hamburger {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .l-container__short {
+    max-width: 592px;
+  }
+  .l-section {
+    margin-top: 10rem;
+  }
+  .l-grid.-gutter {
+    margin: -12px;
+  }
+  .l-grid.-gutter > .l-grid__item {
+    border-width: 12px;
+  }
+  .l-grid__item.-lap1Of12 {
+    width: 8.33333%;
+  }
+  .l-grid__item.-lap2Of12 {
+    width: 16.66667%;
+  }
+  .l-grid__item.-lap3Of12 {
+    width: 25%;
+  }
+  .l-grid__item.-lap4Of12 {
+    width: 33.33333%;
+  }
+  .l-grid__item.-lap5Of12 {
+    width: 41.66667%;
+  }
+  .l-grid__item.-lap6Of12 {
+    width: 50%;
+  }
+  .l-grid__item.-lap7Of12 {
+    width: 58.33333%;
+  }
+  .l-grid__item.-lap8Of12 {
+    width: 66.66667%;
+  }
+  .l-grid__item.-lap9Of12 {
+    width: 75%;
+  }
+  .l-grid__item.-lap10Of12 {
+    width: 83.33333%;
+  }
+  .l-grid__item.-lap11Of12 {
+    width: 91.66667%;
+  }
+  .l-grid__item.-lap12Of12 {
+    width: 100%;
+  }
+  .l-grid__item.-lapFive {
+    width: 20%;
+  }
+}

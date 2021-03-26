@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+/*
+  Centering
+-----------------------------------------------------*/
+
+.l-container__full {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.l-container__middle {
+  margin: 0 auto;
+  max-width: $contentMiddle-width;
+  width: 90%;
+}
+
+.l-container__short {
+  margin: 0 auto;
+  max-width: $contentShort-width;
+  width: 90%;
+}
+
+
+@include mq ( 'tab' ) {
+  .l-container__full {
+    width: 80%;
+  }
+}
+
+
+@include mq ( 'lap' ) {
+  .l-container__short {
+    max-width: $contentShort-width-lap;
+  }
+}

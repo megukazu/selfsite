@@ -1,0 +1,28 @@
+@charset 'UTF-8';
+/*
+  Footer
+-----------------------------------------------------*/
+
+.l-footer {
+  clear: both;
+  overflow: hidden;
+  margin-top: set-size(48px);
+}
+
+.l-footer__title {
+  padding: set-size(24px) 0 0;
+  text-align: center;
+}
+
+.l-footer__copyright {
+  padding: set-size(24px) 0;
+  text-align: center;
+  font-size: set-size(12px);
+}
+
+
+@include mq ( 'tab' ) {
+  .l-footer {
+    margin-top: set-size(128px);
+  }
+}

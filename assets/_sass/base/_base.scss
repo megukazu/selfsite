@@ -1,0 +1,57 @@
+@charset 'UTF-8';
+/*
+  Default Style
+-----------------------------------------------------*/
+
+*,
+:before,
+:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: $main-site-color;
+  color: $main-text-color;
+  font-family: $font-set-primary;
+}
+
+p {
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  color: $main-text-color;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+
+  &:before,
+  &:after {
+    transition: inherit;
+  }
+}
+
+input,
+textarea {
+  padding: 0;
+  outline: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+}

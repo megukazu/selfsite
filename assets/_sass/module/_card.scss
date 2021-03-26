@@ -1,0 +1,69 @@
+@charset 'UTF-8';
+/*
+  Card
+-----------------------------------------------------*/
+
+.cardPrimary {
+  position: relative;
+  display: block;
+  padding-top: percentage(1 / 1.618);
+  text-decoration: none;
+}
+
+.cardPrimary + .cardPrimary {
+  margin-top: 1rem;
+}
+
+.cardPrimary__title {
+  margin-top: set-size(18px);
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.cardPrimary__title--caption {
+  font-size: set-size(14px);
+  margin-top: set-size(8px);
+  display: block;
+}
+
+.cardPrimary__title.--emphasis {
+  font-size: set-size(16px);
+}
+
+.cardPrimary__thumbnail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.cardPrimary__wrap {
+  margin-top: set-size(16px);
+  padding-bottom: set-size(24px);
+  font-size: set-size(13px);
+}
+
+.cardPrimary__link {
+  transition: all .3s ease-in-out;
+  letter-spacing: 3px;
+}
+
+.cardPrimary__link a:hover {
+  color: #ccc;
+}
+
+.cardPrimary__link + .cardPrimary__link {
+  margin-top: set-size(4px);
+}
+
+
+@include mq ( 'tab' ) {
+  .cardPrimary__title {
+    font-size: set-size(16px);
+  }
+
+  .cardPrimary__wrap {
+    margin-top: set-size(24px);
+    padding-bottom: set-size(48px);
+  }
+}

@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+// -----------------------------------
+//  Layout Settings
+//------------------------------------
+
+// Contentの幅
+$contentFull-width: 1200px !default;
+$contentMiddle-width: 1022px !default;
+$contentShort-width: 480px !default;
+$contentShort-width-lap: 592px !default;
+
+// ブレークポイント
+$breakpoints: (
+  'sp': 320px,
+  'tab': 768px,
+  'lap': 1024px,
+) !default;
+
+//====================================
+//  Color Settings
+//====================================
+
+// メインカラー
+$main-site-color: #fff;
+
+// サブカラー
+$sub-site-color: #333;
+
+
+// テキストの色
+// ファーストテキストカラー
+$main-text-color: #333;
+
+// サブテキストカラー
+$sub-text-color: #fff;
+
+
+//====================================
+//  Typeface
+//====================================
+$font-set-primary: 'Noto Serif JP', 游明朝, YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", HG明朝E, "ＭＳ Ｐ明朝", serif;

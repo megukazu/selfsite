@@ -1,0 +1,48 @@
+@charset 'UTF-8';
+/*
+  Media
+-----------------------------------------------------*/
+
+.mediaPrimary {
+  position: relative;
+  display: block;
+  padding-top: 45%;
+  text-decoration: none;
+}
+
+.mediaPrimary__thumbnail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.mediaPrimary__title {
+  margin-top: set-size(24px);
+}
+
+
+@include mq ( 'tab' ) {
+  .mediaPrimary {
+    position: static;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .mediaPrimary__body {
+    float: left;
+    width: 55%;
+  }
+
+  .mediaPrimary__title {
+    margin-top: 0;
+  }
+
+  .mediaPrimary__thumbnail {
+    position: static;
+    float: right;
+    width: 40%;
+  }
+}

@@ -1,0 +1,56 @@
+@charset 'UTF-8';
+/*
+  Header
+-----------------------------------------------------*/
+
+.l-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  padding: set-size(20px) 0;
+  transition: all .3s ease-in-out;
+}
+
+.l-header__title {
+  float: left;
+}
+
+.l-header__logo {
+  letter-spacing: 2px;
+  font-size: set-size(18px);
+}
+
+.l-header__caption {
+  font-size: set-size(14px);
+}
+
+.l-header__nav {
+  float: right;
+}
+
+.is-header .header__title img {
+  width: 70%;
+}
+
+.is-header .header {
+  padding: set-size(6px);
+  background-color: $main-site-color;
+  box-shadow: 0 1px 3px rgba( 0, 0, 0, .1) ;
+}
+
+.is-header .header__nav {
+  padding-top: set-size(8px);
+}
+
+
+@media screen and (min-width: 768px) {
+  .l-header {
+    padding: set-size(30px) 0;
+  }
+
+  .l-header__nav {
+    padding: set-size(8px) 0;
+  }
+}

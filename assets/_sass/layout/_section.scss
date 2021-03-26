@@ -1,0 +1,45 @@
+@charset 'UTF-8';
+/*
+  Section
+-----------------------------------------------------*/
+
+.l-section {
+  padding-top: set-size(24px);
+  margin-top: set-size(56px);
+}
+
+.l-section__button {
+  margin: set-size(36px) auto 0;
+  max-width: set-size(320px);
+}
+
+.l-section__button.--marginShort {
+  margin: set-size(12px) auto 0;
+}
+
+.l-section__buttonItem + .l-section__buttonItem {
+    margin-top: set-size(24px);
+}
+
+
+@include mq ( 'tab' ) {
+  .l-section {
+    padding-top: set-size(64px);
+    margin-top: set-size(112px);
+  }
+
+  .l-section__button {
+    margin-top: set-size(76px);
+  }
+
+  .l-section__button.--marginShort {
+    margin: set-size(28px) auto 0;
+  }
+}
+
+
+@include mq ( 'lap' ) {
+  .l-section {
+    margin-top: set-size(160px);
+  }
+}

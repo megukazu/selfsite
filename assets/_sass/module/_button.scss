@@ -1,0 +1,139 @@
+@charset 'UTF-8';
+/*
+  Button
+-----------------------------------------------------*/
+
+.button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  appearance: none;
+}
+
+/*
+  Hamburger Button
+*/
+
+.button__hamburger {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  bottom: 0;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  margin: auto 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: none; /* Chrome, Safari, Opera, Android */
+     -moz-appearance: none; /* Firefox */
+          appearance: none; /* IE非対応 */
+}
+
+.button__hamburgerLine {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 1px;
+  margin: auto;
+  border-radius: 4px;
+  background-color: #212121;
+  appearance: none;
+}
+
+.button__hamburgerLine:before,
+.button__hamburgerLine:after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background-color: inherit;
+  content: '';
+  transition: transform .3s ease-in-out;
+}
+
+.button__hamburgerLine:before {
+  top: 5px;
+}
+
+.button__hamburgerLine:after {
+  top: -5px;
+}
+
+.is-active-drawer .button__hamburgerLine {
+  background-color: transparent;
+}
+
+.is-active-drawer .button__hamburgerLine:before,
+.is-active-drawer .button__hamburgerLine:after {
+  background-color: #212121;
+  top: 0;
+}
+
+.is-active-drawer .button__hamburgerLine:before {
+  transform: rotate(135deg);
+}
+
+.is-active-drawer .button__hamburgerLine:after {
+  transform: rotate(45deg);
+}
+
+/*
+  Button
+*/
+
+.button__primary {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: $main-text-color;
+  border: 1px solid $main-text-color;
+  padding: set-size(16px) set-size(80px);
+  position: relative;
+  transition: .3s all ease-in-out;
+}
+
+
+.button__primary:after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  bottom: 0;
+  right: 10%;
+  width: 6px;
+  height: 6px;
+  margin: auto 0;
+  border-top: 1px solid $main-text-color;
+  border-right: 1px solid $main-text-color;
+  transform: rotate(45deg);
+}
+
+.button__primary:hover {
+  background-color: $sub-site-color;
+  color: $sub-text-color;
+}
+
+.button__primary:hover:after {
+  border-color: $sub-text-color;
+  right: 7%;
+}
+
+.button__primary.--form {
+  border-color: #ccc;
+  padding: set-size(16px) set-size(48px);
+}
+
+
+@media screen and (min-width: 768px) {
+  .button__hamburger {
+    display: none;
+  }
+}

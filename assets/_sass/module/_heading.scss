@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+/*
+  Heading
+-----------------------------------------------------*/
+
+.heading__primary {
+  margin-bottom: set-size(32px);
+  letter-spacing: 5px;
+  font-size: set-size(24px);
+}
+
+.heading__caption {
+  display: block;
+  margin-top: set-size(8px);
+  letter-spacing: 2px;
+  font-size: set-size(12px);
+  line-height: 1.2;
+}
+
+
+@include mq ( 'tab' ) {
+  .heading__primary {
+    margin-bottom: set-size(60px);
+  }
+
+  .heading__caption {
+    margin-top: set-size(16px);
+    font-size: set-size(16px);
+  }
+}

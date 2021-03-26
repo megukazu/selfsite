@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+/*
+  Form
+-----------------------------------------------------*/
+
+.form__wrap {
+  padding: 0 set-size(16px) set-size(16px);
+  border: 1px solid #ccc;
+}
+
+.textField__label {
+  display: block;
+  margin: set-size(36px) 0 set-size(16px);
+}
+
+.textField__input,
+.textField__message {
+  padding: set-size(16px);
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: set-size(16px);
+}
+
+.textField__message {
+  min-height: set-size(200px);
+}
+
+
+@include mq ( 'tab' ) {
+  .textField__label {
+    margin: set-size(64px) 0 set-size(16px);
+  }
+
+  .form__wrap {
+    padding: 0 set-size(64px) set-size(64px);
+  }
+
+  .textField__message {
+    min-height: set-size(360px);
+  }
+}
